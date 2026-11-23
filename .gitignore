@@ -1,0 +1,6 @@
+data/
+__pycache__/
+*.pyc
+results_*.json
+fig2.json
+tables_md.json

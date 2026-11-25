@@ -23,7 +23,10 @@ code/
 │   ├── 05_confirmation_rate.py       Confirmation rate of creation world by week and group
 │   ├── 06_lift_day.py                Relative creation on the lift date and the day after
 │   ├── 07_figure2_data.py            Weekly average creation index behind Fig. 2
-│   └── 08_tables.py                  Builds the result tables from the saved estimates
+│   ├── 08_tables.py                  Builds the result tables from the saved estimates
+│   ├── 09_middle_estimate.py         Main model excluding only the treated worlds' excess of
+│   │                                 unconfirmed characters (by creation week), with permutation test
+│   └── 10_unconfirmed_levels.py      Current-level distribution of unconfirmed characters by group and period
 └── requirements.txt
 ```
 
@@ -60,6 +63,8 @@ python 05_confirmation_rate.py
 python 06_lift_day.py
 python 07_figure2_data.py            # writes fig2.json
 python 08_tables.py                  # reads the four result files, writes tables_md.json
+python 09_middle_estimate.py         # writes results_middle.json
+python 10_unconfirmed_levels.py
 ```
 
 Scripts 02 to 07 load the shared functions from `01_main_analysis.py`, so run them from the `analysis` folder. Standard errors and intervals come from a bootstrap over ranking pages with 999 replications (random seed fixed in script 01), so scripts 01 to 04 take a while to finish.
